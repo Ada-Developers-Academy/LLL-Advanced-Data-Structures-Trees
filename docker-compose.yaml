@@ -1,0 +1,10 @@
+version: '3'
+services:
+  gitpitch:
+    image: gitpitch/desktop:pro
+    volumes:
+      - .:/repo:cached
+    ports:
+      - "9000:9000"
+    environment:
+      - PORT=9000

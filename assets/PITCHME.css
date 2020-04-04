@@ -1,0 +1,35 @@
+.reveal .slides section>ul, .reveal .slides section>ol {
+  margin-left: 1em;
+}
+
+.reveal .slides {
+  margin-top: 4vh;
+}
+
+.reveal .slides[style] {
+  /* width: 92vw !important; */
+}
+
+.reveal .slides .small {
+  font-size: 0.8em;
+}
+
+.reveal .slides .big {
+  font-size: 1.3em;
+}
+
+.reveal .slides .indent {
+  margin-left: 1rem;
+}
+
+.reveal .slides ul {
+  margin-bottom: .8em;
+}
+
+.reveal .slides pre {
+  margin: 1.5em 0;
+}
+
+.reveal .slides pre code {
+  max-height: 100vh !important;
+}

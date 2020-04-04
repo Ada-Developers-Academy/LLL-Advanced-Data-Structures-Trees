@@ -1,0 +1,54 @@
+# Adapted from:
+# GitPitch In-60-Seconds - A Very Short Tutorial.
+# https://github.com/gitpitch/in-60-seconds
+#
+
+#
+# Theme Template
+# Doc: https://gitpitch.com/docs/themes/default
+#
+
+# Ada palette: https://drive.google.com/file/d/1V-WVd9LMHrPlJzSK55he8GqytENIpmvG/view
+theme            : template
+
+theme-background : [ "#ffffff" ]
+theme-headline   : [ "Montserrat", "#E61E5F", "none", "#EF654A", "90", "120", "15" ]
+theme-byline     : [ "Open Sans", "#12A3C2", "none", "#EF654A", "90", "110", "15" ]
+theme-text       : [ "Open Sans", "#17385E", "none", "#12A3C2", "90", "120", "15" ]
+theme-links      : [ "#EF654A", "#E61E5F" ]
+theme-code       : [ "Source Code Pro", "100", "120" ]
+theme-controls   : [ "#C0C0C0" ]
+theme-margins    : [ "0", "15px" ]
+
+#
+# Highlight Setting
+# Doc: https://gitpitch.com/docs/settings/highlight
+#
+highlight : atom-one-light
+
+#
+# Theme-Override Setting
+# Doc: https://gitpitch.com/docs/settings/custom-theme
+#
+theme-override: ../assets/PITCHME.css
+
+#
+# Logo Setting
+# https://gitpitch.com/docs/settings/logo
+#
+logo : assets/images/logo.png
+logo-position : top-right
+
+#
+# Layout Setting
+# Doc: https://gitpitch.com/docs/settings/layout
+#
+layout : top-left
+
+#
+# Footnote Setting
+# Doc: https://gitpitch.com/docs/settings/footnote
+#
+footnote : "LLL - Advanced Data Structure - Trees - Week 1: Collections"
+footnote-position : bottom-right
+
