@@ -2,16 +2,14 @@
 # Collections
 @snapend
 
----
+---?include=collections/slides/intro.md
 
----?include=slides/intro.md
+---?include=collections/slides/thinking-about-data-structures.md
 
----?include=slides/thinking-about-data-structures.md
+---?include=collections/slides/interfaces.md
 
----?include=slides/interfaces.md
+---?include=collections/slides/implementation.md
 
----?include=slides/implementation.md
+---?include=collections/slides/example.md
 
----?include=slides/example.md
-
----?include=slides/homework.md
+---?include=collections/slides/homework.md
