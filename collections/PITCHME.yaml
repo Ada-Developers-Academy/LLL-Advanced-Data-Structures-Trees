@@ -36,8 +36,8 @@ theme-override: ../assets/PITCHME.css
 # Logo Setting
 # https://gitpitch.com/docs/settings/logo
 #
-logo : assets/images/logo.png
-logo-position : top-right
+logo: ../assets/logo.png
+logo-position: top-right
 
 #
 # Layout Setting
@@ -49,6 +49,6 @@ layout : top-left
 # Footnote Setting
 # Doc: https://gitpitch.com/docs/settings/footnote
 #
-footnote : "LLL - Advanced Data Structure - Trees - Week 1: Collections"
+footnote : "LLL - Advanced Data Structures Trees - Week 1: Collections"
 footnote-position : bottom-right
 

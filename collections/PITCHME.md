@@ -1,5 +1,17 @@
+@snap[midpoint]
 # Collections
+@snapend
 
 ---
 
-## Slide 2
+---?include=slides/intro.md
+
+---?include=slides/thinking-about-data-structures.md
+
+---?include=slides/interfaces.md
+
+---?include=slides/implementation.md
+
+---?include=slides/example.md
+
+---?include=slides/homework.md
