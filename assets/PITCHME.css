@@ -33,3 +33,10 @@
 .reveal .slides pre code {
   max-height: 100vh !important;
 }
+
+.reveal .slides table {
+  width: 85vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
