@@ -30,7 +30,7 @@ highlight : atom-one-light
 # Theme-Override Setting
 # Doc: https://gitpitch.com/docs/settings/custom-theme
 #
-theme-override: ../assets/PITCHME.css
+theme-override: assets/PITCHME.css
 
 #
 # Logo Setting
