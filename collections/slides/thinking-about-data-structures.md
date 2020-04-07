@@ -12,17 +12,17 @@
 
 ---
 
-## Why are Data Structures important?
+## Why Study DS?
 
 Data structures are the bones of our program
 
-Choosing a DS that matches the problem will make it easy to write clean, efficient code
+Choosing a DS that matches the problem will make it **easy** to write clean, efficient code
+
+You may need to customize a DS to your specific problem
 
 ---
 
-## What do we get from studying Data Structures
-
-Knowledge of specific data structures
+## Why Study DS?
 
 Opportunity to practice...
 
@@ -30,25 +30,41 @@ Opportunity to practice...
 - Analysis
 - Design (OO and otherwise)
 
-Data Structures problems tend to be **well-defined** and **isolated**, which makes them great practice (and interview) problems
+Data Structures problems tend to be **well-defined** and **isolated**, which makes them great practice problems
+
+They're also common **interview questions**
 
 ---
 
-## How should we study Data Structures?
+## How Do You Study DS?
 
+Three key categories of knowledge:
 
+<ul class="small">
+<li>**Interface**: what does it do?</li>
+<li>**Implementation**: how does it work?</li>
+<li>**Analysis**: how much does it cost?</li>
+</ul>
+
+Take them one at a time
+
+Start with a motivating problem
+
+Comparisons to other data structures are key
 
 ---
+
+@snap[north-west text-left span-47]
 
 ## Interface
 
-@snap[west text-left span-47]
-
-What does it look like from the outside
+### What does it do?
 
 - Methods, arguments, return values
 - Conditions and assumptions
 - Guarantees
+
+What sorts of problems can you solve with it?
 
 @snapend
 
@@ -70,7 +86,7 @@ const first = stack.pop();
 
 ## Implementation
 
-What does it look like on the inside?
+### How does it work?
 
 - Structure
 
@@ -78,7 +94,9 @@ What does it look like on the inside?
 
 ---
 
-## Structure
+## Implementation
+
+### Structure
 
 How is the data organized?
 
@@ -88,9 +106,15 @@ How is the data organized?
 
 - Draw a picture!
 
+@snap[east span-40]
+![avl tree](collections/images/tads-avl-tree.png)
+@snapend
+
 ---
 
-## Algorithms
+## Implementation
+
+### Algorithms
 
 How do the methods work?
 
@@ -98,11 +122,61 @@ How do the methods work?
 
 - Testing
 
-- Time and space complexity
+- Draw a picture!
+
+@snap[east span-45]
+![tree rotation](collections/images/tads-tree-rotation.png)
+@snapend
+
+---
+
+@snap[north-west text-left span-70]
+
+## Analysis
+
+### How much does it cost?
+
+Time and space complexity
+
+Interested in **growth**:
+
+- If I double the size of my input, how much longer will it take?
+
+- If I buy a computer with 4 times the memory, how much more data can I process?
+
+@snapend
+
+@snap[east span-30]
+![complexity graph](collections/images/tads-complexity-graphs.png)
+@snapend
+
+---
+
+## Example: Queues
+
+In the next few modules we'll dive into each of those concepts deeper
+
+<br>
+
+As a running example we'll use a queue
+
+<br>
+
+If you don't quite recall how they work don't worry, we'll go through it piece by piece
 
 ---
 
 ## Summary
+
+Finding the right DS for your problem is key
+
+<br>
+
+DS problems are great coding practice
+
+<br>
+
+When studying a new DS, we'll focus on **interface**, **implementation** and **analysis**
 
 ---
 
@@ -111,3 +185,13 @@ How do the methods work?
 ---
 
 ## Review Questions
+
+---
+
+## Image Sources
+
+AVL tree: https://en.wikipedia.org/wiki/AVL_tree#/media/File:AVL-tree-wBalance_K.svg
+
+Tree rotation: https://en.wikipedia.org/wiki/Tree_rotation#/media/File:Tree_rotation.png
+
+Complexity graphs: https://en.wikipedia.org/wiki/File:Comparison_computational_complexity.svg
