@@ -1,5 +1,7 @@
 @snap[midpoint]
+
 # Thinking About Data Structures
+
 @snapend
 
 ---
@@ -9,6 +11,12 @@
 ---
 
 ## What is a Data Structure?
+
+@quote[A data structure is a data organization, management, and storage format that enables efficient access and modification.](Wikipedia)
+
+<br>
+
+System to store and work with data in a computer's memory
 
 ---
 
@@ -181,6 +189,15 @@ When studying a new DS, we'll focus on **interface**, **implementation** and **a
 ---
 
 ## Vocab
+
+| Term           | Definition                                                        |
+| -------------- | ----------------------------------------------------------------- |
+| Data structure | System to store and work with data in a computer's memory         |
+| Interface      | View of a data structure from the **outside**                     |
+| Implementation | How a data structure works on the **inside**                      |
+| Structure      | How a DS organizes its data in memory                             |
+| Algorithm      | How a DS accesses and modifies its data                           |
+| Analysis       | Study of the **resources** (time, space) used by a data structure |
 
 ---
 
