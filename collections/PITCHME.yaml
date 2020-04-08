@@ -14,7 +14,7 @@ theme            : template
 theme-background : [ "#ffffff" ]
 theme-headline   : [ "Montserrat", "#E61E5F", "none", "#EF654A", "90", "120", "15" ]
 theme-byline     : [ "Open Sans", "#12A3C2", "none", "#EF654A", "90", "110", "15" ]
-theme-text       : [ "Open Sans", "#17385E", "none", "#12A3C2", "90", "120", "15" ]
+theme-text       : [ "Open Sans", "#17385E", "none", "#12A3C2", "90", "120", "25" ]
 theme-links      : [ "#EF654A", "#E61E5F" ]
 theme-code       : [ "Source Code Pro", "100", "120" ]
 theme-controls   : [ "#C0C0C0" ]

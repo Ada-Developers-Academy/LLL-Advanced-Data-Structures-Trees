@@ -40,3 +40,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+.color-fuscia {
+  color: #E61E5F;
+}
