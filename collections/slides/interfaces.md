@@ -68,7 +68,7 @@ Anything else to pay attention to?
 
 <br>
 
-As we proceed, keep the queue in mind (we'll come back to it)
+Keep the queue in mind as we proceed, we'll come back to it
 
 @snapend
 
@@ -132,7 +132,8 @@ Are there relationships between records?
 
 - Immutable
 - Observable (notify on change)
-- Serializable to disk (database or flat file) or network
+- Serializable to disk or network
+- Fits in a relational database
 - Thread-safe
 - Distributed
 
