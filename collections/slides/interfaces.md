@@ -10,6 +10,12 @@
 
 ## What is an Interface
 
+@quote[A shared boundary across which two or more separate components of a computer system exchange information](Wikipedia)
+
+The methods our data structure exposes to the rest of the program
+
+How you **use** it, not how it **works**
+
 ---
 
 ## How will we study Interfaces?
@@ -29,6 +35,8 @@ Write down formal definition
 In the same way that art and money aren't real
 
 JavaScript is **dynamically typed**, so unlike Java or Go there is nothing called an "interface" in the language
+
+Added bonus: we can store any type of object without having to mess with generics
 
 Put your faith in duck typing!
 
@@ -52,6 +60,8 @@ Tasks should be done in **first-come-first-served** order
 <br>
 
 I need a data structure to **keep track of waiting tasks**
+
+We'll call it a **queue** (think of a line of people)
 
 ---
 
@@ -78,6 +88,12 @@ Keep the queue in mind as we proceed, we'll come back to it
 
 ---
 
+## TODO
+
+- Commands and Queries
+
+---
+
 ## What is Being Stored?
 
 We'll call whatever is stored a **record**
@@ -90,10 +106,13 @@ Are records unique?
 
 Are there relationships between records?
 
+Note: elements and values are **opaque**
+
 ---
 
 ## Interacting With Stored Data
 
+- Count records
 - Retrieve one record at a time
 - Remove records
 - Iterate through all records
@@ -102,9 +121,12 @@ Are there relationships between records?
 
 ## Retrieval and Removal
 
+- Get the "next" element
 - Lookup by key or index
 - Search for the element
 - "Fuzzy" search (partial matches, similarity, etc)
+
+Note: remove usually returns the removed element
 
 ---
 
@@ -115,6 +137,8 @@ Are there relationships between records?
 - User-defined ordering (custom sort function)
 - If unordered, does it need to be consistent?
 - Can you modify elements as you iterate?
+
+Note: in this course, iteration means implementing `forEach`
 
 ---
 
@@ -141,8 +165,84 @@ Generally beyond the scope of this course
 
 ---
 
+## The Queue
+
+Pause the video and answer the following questions about our queue data structure:
+
+- What **type of records** are we storing?
+- What **operations** do we need to support?
+- What (if any) **ordering** do we maintain?
+- What **use pattern** do we expect?
+
+---
+
+## The Queue
+
+Records are **individual elements**
+
+Supported operations:
+
+- **Enqueue** (insert at the back)
+- **Dequeue** (remove from the front)
+- **Count** records
+- Possibly **iterate**
+
+**Insertion order matters**, for both dequeue and iterate
+
+<p class="small">First-in first-out</p>
+
+Inserts and removes will be **mixed**
+
+---
+
+## Formal Definition
+
+Our last step is to write down a formal definition of the data structure
+
+Design documents, docstrings, method stubs, etc.
+
+In this class we'll use a combination of docstrings (with JSDoc) and method stubs
+
+---
+
+## Queries and Commands
+
+Every method on our data structure is either a query or a command
+
+**Queries** retrieve information
+
+**Commands** modify the data structure (and may also return something)
+
+Labeling methods as queries and commands is useful!
+
+**Question:** Which of our queue operations are queries and which are commands?
+
+---
+
+## Performance
+
+Performance guarantees can be part of an interface
+
+In future weeks we'll often start with a performance requirement as part of our motivating problem
+
+This week we'll hold off until after we've talked about analysis
+
+---
+
+## Queue Formal Definition
+
+[Find it here]()
+
+---
 
 ## Summary
+
+An interface defines what can be done with our data structure
+
+Steps for defining an interface
+- Start with a problem to solve
+- Ask a bunch of questions
+- Write down a formal definition
 
 ---
 
