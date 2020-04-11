@@ -1,10 +1,19 @@
 @snap[midpoint]
+
 # Interfaces
+
 @snapend
 
 ---
 
 ## Learning Goals
+
+By the end of this module, students will be able to...
+
+- **Define** the term interface and related keywords
+- **Identify** questions to ask when designing an interface
+- **Describe** the interface of a queue
+- **Differentiate** between queries and commands
 
 ---
 
@@ -30,18 +39,6 @@ Write down formal definition
 
 ---
 
-## Interfaces Aren't Real
-
-In the same way that art and money aren't real
-
-JavaScript is **dynamically typed**, so unlike Java or Go there is nothing called an "interface" in the language
-
-Added bonus: we can store any type of object without having to mess with generics
-
-Put your faith in duck typing!
-
----
-
 ## Motivating Problem
 
 I have some resource that does **tasks**
@@ -57,8 +54,6 @@ The resource can only do **one task at a time**
 
 Tasks should be done in **first-come-first-served** order
 
-<br>
-
 I need a data structure to **keep track of waiting tasks**
 
 We'll call it a **queue** (think of a line of people)
@@ -66,6 +61,7 @@ We'll call it a **queue** (think of a line of people)
 ---
 
 @snap[northwest span-70]
+
 ## Questions
 
 **What** is being stored?
@@ -85,12 +81,6 @@ Keep the queue in mind as we proceed, we'll come back to it
 @snap[east span-40]
 @fa[question fa-6x color-fuscia]
 @snapend
-
----
-
-## TODO
-
-- Commands and Queries
 
 ---
 
@@ -207,13 +197,13 @@ In this class we'll use a combination of docstrings (with JSDoc) and method stub
 
 ## Queries and Commands
 
-Every method on our data structure is either a query or a command
+Every operation is either a query or a command
 
-**Queries** retrieve information
+**Queries** retrieve information without changing the DS
 
-**Commands** modify the data structure (and may also return something)
+**Commands** modify the DS
 
-Labeling methods as queries and commands is useful!
+<p class="small">Labeling operations as queries and commands is useful!</p>
 
 **Question:** Which of our queue operations are queries and which are commands?
 
@@ -235,18 +225,51 @@ This week we'll hold off until after we've talked about analysis
 
 ---
 
+## Interfaces Aren't Real
+
+In the same way that art and money aren't real
+
+JavaScript is **dynamically typed**, so unlike Java or Go there is nothing called an "interface" in the language
+
+Put your faith in duck typing!
+
+Added bonus: we can store any type of object without having to mess with generics
+
+---
+
 ## Summary
 
 An interface defines what can be done with our data structure
 
-Steps for defining an interface
+Steps for defining an interface:
+
 - Start with a problem to solve
 - Ask a bunch of questions
+- Come up with an English description
 - Write down a formal definition
 
 ---
 
-## Vocab
+## Vocab 1
+
+| Term      | Definition                                                               |
+| --------- | ------------------------------------------------------------------------ |
+| Interface | The methods exposed by our data structure                                |
+| Record    | Something stored by our DS, usually an opaque object or a key-value pair |
+| Operation | Something our DS can do, like insert or iterate                          |
+| Query     | An operation that retrieves data without modifying the DS                |
+| Command   | Any operation that modifies the DS                                       |
+
+---
+
+## Vocab 2
+
+| Term     | Definition                                                |
+| -------- | --------------------------------------------------------- |
+| Ordering | When we iterate records, how do we know which comes next? |
+| Queue    | List of elements in first-in, first-out order             |
+| Enqueue  | Add an element to the back of a queue                     |
+| Dequeue  | Remove an element from the front of a queue               |
 
 ---
 
