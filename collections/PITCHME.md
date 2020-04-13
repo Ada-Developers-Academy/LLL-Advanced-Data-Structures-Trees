@@ -10,6 +10,8 @@
 
 ---?include=collections/slides/implementation.md
 
+---?include=collections/slides/analysis.md
+
 ---?include=collections/slides/example.md
 
 ---?include=collections/slides/homework.md

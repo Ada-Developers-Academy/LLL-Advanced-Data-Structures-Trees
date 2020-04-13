@@ -1,6 +1,6 @@
 @snap[midpoint]
 
-# Implementation
+# Analysis
 
 @snapend
 
