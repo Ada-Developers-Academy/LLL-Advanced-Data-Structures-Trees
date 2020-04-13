@@ -233,7 +233,9 @@ JavaScript is **dynamically typed**, so unlike Java or Go there is nothing calle
 
 Put your faith in duck typing!
 
-Added bonus: we can store any type of object without having to mess with generics
+<br>
+
+<p class="small">Added bonus: we can store any type of object without having to mess with generics</p>
 
 ---
 
