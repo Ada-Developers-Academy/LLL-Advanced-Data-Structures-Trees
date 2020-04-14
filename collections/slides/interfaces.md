@@ -191,7 +191,9 @@ Our last step is to write down a formal definition of the data structure
 
 Design documents, docstrings, method stubs, etc.
 
-In this class we'll use a combination of docstrings (with JSDoc) and method stubs
+This is also a great time to write tests!
+
+In this class we'll use a combination of docstrings (with JSDoc), method stubs, and tests or test stubs
 
 ---
 
