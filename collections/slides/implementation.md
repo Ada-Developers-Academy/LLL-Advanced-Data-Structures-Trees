@@ -1,6 +1,8 @@
 @snap[midpoint]
 
-# Implementation
+# Design and Implementation
+
+### Array Queues
 
 @snapend
 
@@ -14,9 +16,11 @@ By the end of this module, students will be able to...
 
 ## What is Implementation
 
-@quote[The process of moving an idea from concept to reality... implementation refers to the building process rather than the design process.](wictionary)
+@quote[The process of moving an idea from concept to reality](wictionary)
 
 Writing the code to make our data structure work
+
+
 
 ---
 
@@ -91,6 +95,7 @@ Pause the video and brainstorm how we might implement our queue DS
 <ul class="small">
 <li>**Enqueue** (insert at the back)</li>
 <li>**Dequeue** (remove from the front)</li>
+<li>**Cancel** (remove specific record)</li>
 <li>**Count** records</li>
 <li>Possibly **iterate**</li>
 </ul>
@@ -107,11 +112,41 @@ Enqueue at the end of the array (big indices)
 
 Dequeue from the front of the array (small indices)
 
+Cancelled elements are set to `undefined`
+
+---
+
+## TODO: AQ visualization
+
+---
+
+## Array Queue Code
+
+[Check it out on GitHub]()
+
+## TODO Link
+
 ---
 
 ## Problem
 
 Array insertion 
+
+
+---
+
+Planning
+
+Need to go back and forth between impl and anls
+
+Why study linked lists?
+- Fast insert/remove
+- Good intro to other DS that involve links (tree, graph)
+- Can be included in other DS (LRU, some tree impls (DOM?))
+
+
+
+
 
 ---
 
@@ -122,11 +157,19 @@ Array insertion
 ## Vocab
 
 | Term | Definition |
-| ---<li>| ---------- |</li>
+| ---| ---------- |
 
 ---
 
 ## Review Questions
+
+
+---
+
+## Planning for Discussion Questions
+
+- Ring buffer
+- Dynamic array insertion is O(1)
 
 ---
 

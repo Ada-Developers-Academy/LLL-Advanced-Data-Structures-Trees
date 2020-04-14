@@ -54,6 +54,8 @@ The resource can only do **one task at a time**
 
 Tasks should be done in **first-come-first-served** order
 
+Tasks can be **cancelled**
+
 I need a data structure to **keep track of waiting tasks**
 
 We'll call it a **queue** (think of a line of people)
@@ -174,6 +176,7 @@ Supported operations:
 
 - **Enqueue** (insert at the back)
 - **Dequeue** (remove from the front)
+- **Cancel** (remove specific record)
 - **Count** records
 - Possibly **iterate**
 
