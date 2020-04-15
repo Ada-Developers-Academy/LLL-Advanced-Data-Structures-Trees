@@ -49,12 +49,19 @@ In this course we will focus on **theoretical analysis**
 
 ---
 
-## Theoretical Analysis
+## Environment
 
-- Primitives
-- Composing primitives into operations
-- Measuring growth (drop the constant) (what's growing?)
-- Average case vs worst case
+Theoretical analysis can be difficult in JavaScript because the language hides details
+
+<ul class="small">
+<li>Dynamic arrays</li>
+<li>Automatic memory management</li>
+<li>The JIT</li>
+</ul>
+
+Sometimes JS finds a clever way to get around something that ought to be expensive
+
+Sometimes it does something expensive behind the scenes
 
 ---
 
@@ -85,7 +92,7 @@ Growth is always **in terms of** something
 
 Usually the number of **inputs** or **operations**
 
-We'll use letters (usually `n`, `m`, etc) to represent these numbers
+We'll use letters (usually `n`, `m`, `k`, etc) to represent these numbers
 
 <ul class="small">
 <li>How much space does our queue take to store `n` records?</li>
@@ -280,7 +287,9 @@ Polynomial operations:
 
 Unless otherwise stated, assume we're analyzing the performance in the worst case scenario
 
+Often makes the analysis easier
 
+Better to be pleasantly surprised...
 
 ---
 
@@ -305,9 +314,31 @@ We **ignore** any coefficients (constant multipliers)
 
 <p class="small">They don't change the shape of the curve, just the angle</p>
 
+```txt zoom-12
+n*log(n) + n + 2n + 1 + 4n^2
+
+turns into
+
+n*log(n) + n + 1 + n^2
+```
+
+---
+
+## Sequence
+
 The **fastest-growing** operation determines the order
 
 <p class="small">We say it **dominates** the complexity</p>
+
+```txt zoom-12
+n^2 + n*log(n) + n + 1
+
+turns into
+
+O(n^2)
+```
+
+Exception: different inputs (`m` and `n`) don't dominate each other
 
 ---
 
@@ -405,7 +436,7 @@ const sumEvenLengthsOfEveryTenthWord = (wordList) => {
 
 If code is nested in a loop, we **multiply** the complexity of the loop body by the length of the loop
 
-<p class="small">We do this that many times</p>
+<p class="small">We do this, that many times</p>
 
 ---
 
@@ -493,56 +524,22 @@ const allPairs = (list) => {
 
 ---
 
+## Summary
 
-- Sequence
-- Loops
-- Drop coefficients
-- Multiple inputs
-
-
-
-
-
-
----
-
-## Environment
-
-Theoretical analysis can be difficult in JavaScript because the language hides details
-
+For operations in sequence:
 <ul class="small">
-<li>Dynamic arrays</li>
-<li>Automatic memory management</li>
-<li>The JIT</li>
+<li>Add complexities</li>
+<li>Drop coefficients</li>
+<li>Find the dominant term</li>
 </ul>
 
-Sometimes JS finds a clever way to get around something that ought to be expensive
+For operations in a loop:
+<ul class="small">
+<li>Figure out complexity of the loop body</li>
+<li>Multiply by the number of iterations</li>
+</ul>
 
-Sometimes it does something expensive behind the scenes
-
----
-
-## Time Primitives
-
-Constant:
-
-- Math and comparisons on individual values
-- Array and hash insert and lookup
-
-Linear:
-
-- Looping through an array
-- Most array operations (slice, splice, filter, map, reduce)
-
----
-
-## Time Composition
-
-- Loop:
-
----
-
-## Summary
+Always assume the worst case
 
 ---
 
@@ -550,7 +547,21 @@ Linear:
 
 | Term | Definition |
 | ---- | ---------- |
+Analysis | Determining how much time or space is used by an algorithm
+Complexity | How the resources used by an algorithm grow
+Worst case | 
 
+---
+
+## Orders
+
+| Order                     | Name        | Growth                     | Operations        |
+| ------------------------- | ----------- | -------------------------- | ----------------- |
+| `O(1)`                    | Constant    | None!                      | Do one thing      |
+| `O(log(n))`               | Logarithmic | Slower than input          | Binary search     |
+| `O(n)`                    | Linear      | Same as input              | Loop over list    |
+| <code>O(n\*log(n))</code> | Log-linear  | Slightly faster than input | Sort a list       |
+| `O(n^2)`                  | Polynomial  | Much faster than input     | Compare two lists |
 
 ---
 
