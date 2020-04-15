@@ -2,15 +2,19 @@
 # Collections
 @snapend
 
+<!-- TODO figure out order -->
+
 ---?include=collections/slides/intro.md
+
+---?include=collections/slides/analysis-review.md
 
 ---?include=collections/slides/thinking-about-data-structures.md
 
 ---?include=collections/slides/interfaces.md
 
----?include=collections/slides/implementation.md
+---?include=collections/slides/arrayqueue-implementation.md
 
----?include=collections/slides/analysis.md
+---?include=collections/slides/arrayqueue-analysis.md
 
 ---?include=collections/slides/example.md
 

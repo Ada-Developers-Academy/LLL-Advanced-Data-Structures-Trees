@@ -126,6 +126,8 @@ Cancelled elements are set to `undefined`
 
 ## TODO Link
 
+Comprehension questions on the code?
+
 ---
 
 ## Problem
