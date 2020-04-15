@@ -66,6 +66,20 @@ Garbage collector, JIT compiler
 
 ---
 
+## Arrays
+
+Dynamic resizing - grow automatically (typically double at powers of two), never shrink
+
+Insert is still **amortized** O(1)
+
+<p class="small">Amortized: "this is always the average, but it's possible the worst case will be really bad"</p>
+
+Heterogenous - can contain multiple types
+
+Not guaranteed to be contiguous
+
+---
+
 ## An Omission
 
 Turns out JavaScript Arrays already implement the queue interface

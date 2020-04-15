@@ -52,3 +52,5 @@ layout : top-left
 footnote : "LLL - Advanced Data Structures Trees - Week 1: Collections"
 footnote-position : bottom-right
 
+# Turn on MathJax plugin
+mathjax : TeX-MML-AM_HTMLorMML-full

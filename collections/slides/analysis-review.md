@@ -287,9 +287,13 @@ Polynomial operations:
 
 Unless otherwise stated, assume we're analyzing the performance in the worst case scenario
 
+Establishing an **upper bound** for complexity
+
 Often makes the analysis easier
 
-Better to be pleasantly surprised...
+Often the best we can do without knowledge of the **workflow**
+
+<p class="small">Better to be pleasantly surprised...</p>
 
 ---
 
