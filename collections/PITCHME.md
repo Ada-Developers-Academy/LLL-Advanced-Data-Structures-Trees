@@ -19,3 +19,7 @@
 ---?include=collections/slides/example.md
 
 ---?include=collections/slides/homework.md
+
+# External Resources
+
+- Chris video on Linked Lists: https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3d26a067-6d23-4d72-828f-ab0901477868

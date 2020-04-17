@@ -294,16 +294,31 @@ forEach(callback) {
 
 ---
 
-## Summary
+## Summary - Time
 
 Time complexities are good!
 
-<p class="small">Constant enqueue, cancel, dequeue, and linear forEach</p>
-<p class="small">Exactly what you'd expect</p>
+**Constant** enqueue, cancel
+
+**Linear** forEach
+
+Dequeue is **worst-case linear**, but **amortized constant**
+
+About what you'd expect
+
+---
+
+## Summary - Space
 
 Space complexity for individual operations is OK
 
-Space complexity for workflows is worse than expected
+Space complexity for **workflows** is **worse** than expected
+
+**Linear** in the **total** number of records ever enqueued
+
+<p class="small">We would expect linear in the number of records **currently** in the queue</p>
+
+Dequeue and cancel don't free memory!
 
 ---
 
