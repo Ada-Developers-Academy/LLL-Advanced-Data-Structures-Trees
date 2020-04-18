@@ -86,6 +86,7 @@ cancel(ticket) {
 <p>Constant time, constant space!</p>
 <p>Note that cancel does not free any memory</p>
 <p class="small">This may cause problems later</p>
+<p class="small">We call this situation a **memory leak**</p>
 </div>
 
 ---
@@ -163,7 +164,7 @@ dequeue() {
 
 Constant space, but doesn't free memory
 
-Same problem as cancellation
+Same memory leak problem as cancellation
 
 A workflow of `d` enqueues and dequeues uses `d` memory to store `0` objects
 
