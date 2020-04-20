@@ -44,3 +44,8 @@
 .color-fuscia {
   color: #E61E5F;
 }
+
+.reveal .slides .midpoint h1 {
+  /* Skip the margin at the top of the page */
+  margin-top: -4vh;
+}
