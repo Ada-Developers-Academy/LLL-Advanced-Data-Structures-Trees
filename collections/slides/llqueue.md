@@ -185,9 +185,13 @@ Using a **sentinel node** allows us to simplify our list implementation
 
 ## Vocab
 
-| Term | Definition |
-| ---- | ---------- |
-
+| Term        | Definition                                                                         |
+| ----------- | ---------------------------------------------------------------------------------- |
+| Linked list | Linear data structure made from a chain of linked objects                          |
+| Node        | One object in our linked list, keeps references to next/prev nodes and its element |
+| Head        | First node in the LL                                                               |
+| Tail        | Last node in the LL                                                                |
+| Sentinel    | Dummy node with no element used to simplify implementation                         |
 
 ---
 
