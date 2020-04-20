@@ -54,7 +54,7 @@ The resource can only do **one task at a time**
 
 Tasks should be done in **first-come-first-served** order
 
-Tasks can be **cancelled**
+Tasks can be **canceled**
 
 I need a data structure to **keep track of waiting tasks**
 
@@ -177,14 +177,38 @@ Supported operations:
 - **Enqueue** (insert at the back)
 - **Dequeue** (remove from the front)
 - **Cancel** (remove specific record)
-- **Count** records
-- Possibly **iterate**
+- **Count** records, **iterate**
 
 **Insertion order matters**, for both dequeue and iterate
 
 <p class="small">First-in first-out</p>
 
 Inserts and removes will be **mixed**
+
+---
+
+## Cancelation
+
+How does the client tell us which record to `cancel`?
+
+<div class="fragment">
+<p>Option: pass in the element</p>
+
+<ul class="small">
+<li>Probably requires linear search</li>
+<li>What about duplicate elements?</li>
+</ul>
+</div>
+
+<div class="fragment">
+<p>Option: `insert` returns a cancelation **ticket**</p>
+
+<ul class="small">
+<li>Ticket is **opaque** (client can't read it)</li>
+<li>Could be an integer, an object, etc</li>
+<li>Similar to `.setInterval()` and `.clearInterval()`</li>
+</ul>
+</div>
 
 ---
 
@@ -277,6 +301,7 @@ Steps for defining an interface:
 | Queue    | List of elements in first-in, first-out order             |
 | Enqueue  | Add an element to the back of a queue                     |
 | Dequeue  | Remove an element from the front of a queue               |
+| Opaque   | The contents of an object are not exposed to code that handles it |
 
 ---
 

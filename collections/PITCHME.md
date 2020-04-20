@@ -16,6 +16,8 @@
 
 ---?include=collections/slides/arrayqueue-analysis.md
 
+---?include=collections/slides/llqueue.md
+
 ---?include=collections/slides/example.md
 
 ---?include=collections/slides/homework.md

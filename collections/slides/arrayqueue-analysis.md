@@ -95,7 +95,7 @@ cancel(ticket) {
 
 What are the time and space complexities of...
 
-Enqueueing and then cancelling n elements?
+Enqueueing and then canceling n elements?
 
 <div class="fragment">
 <p>`O(n)` time (as expected)</p>
@@ -112,7 +112,7 @@ Enqueueing and then cancelling n elements?
 | Term | Meaning                                                            |
 | ---- | ------------------------------------------------------------------ |
 | `n`  | Number of elements **currently** in the queue                      |
-| `c`  | Number of elements that have been **cancelled**                    |
+| `c`  | Number of elements that have been **canceled**                    |
 | `d`  | Number of elements that have been **dequeued**                     |
 | `h`  | Total number of elements we've **ever** enqueued (`h` for history) |
 
@@ -128,7 +128,7 @@ Invariant: `n + c + d = h`
 
 What are the time and space complexities of...
 
-Enqueueing and then cancelling c elements?
+Enqueueing and then canceling c elements?
 
 <p>`O(c)` time (as expected)</p>
 <p>`O(c)` space (not so good)</p>
@@ -140,7 +140,7 @@ Enqueueing and then cancelling c elements?
 
 ```js zoom-10
 dequeue() {
-  // skip cancelled elements at the front of the queue
+  // skip canceled elements at the front of the queue
   while (this.head < this.tail &&
       this.storage[this.head] === undefined) {
     this.head += 1;
@@ -164,7 +164,7 @@ dequeue() {
 
 Constant space, but doesn't free memory
 
-Same memory leak problem as cancellation
+Same memory leak problem as cancelation
 
 A workflow of `d` enqueues and dequeues uses `d` memory to store `0` objects
 
@@ -177,7 +177,7 @@ A workflow of `d` enqueues and dequeues uses `d` memory to store `0` objects
 All `O(1)` except for the while loop
 
 ```js zoom-12
-// skip cancelled elements at the front of the queue
+// skip canceled elements at the front of the queue
 while (this.head < this.tail && this.storage[this.head] === undefined) {
   this.head += 1;
   this.cancelCount -= 1;
@@ -187,7 +187,7 @@ while (this.head < this.tail && this.storage[this.head] === undefined) {
 Depends on our workflow - what is the **worst case**?
 
 <div class="fragment">
-<p>`c` cancelled elements at the head of the queue</p>
+<p>`c` canceled elements at the head of the queue</p>
 <p>Dequeue is `O(c)`</p>
 </div>
 
@@ -289,7 +289,7 @@ forEach(callback) {
 ```
 
 <div class="fragment">
-<p>Similar to dequeue, we skip cancelled elements</p>
+<p>Similar to dequeue, we skip canceled elements</p>
 `\[O(n + c)\]`
 </div>
 

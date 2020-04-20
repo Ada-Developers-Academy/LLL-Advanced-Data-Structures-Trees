@@ -126,7 +126,7 @@ Enqueue at the end of the array (big indices)
 
 Dequeue from the front of the array (small indices)
 
-Cancelled elements are set to `undefined`
+Canceled elements are set to `undefined`
 
 ---
 
