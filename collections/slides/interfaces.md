@@ -174,10 +174,12 @@ Records are **individual elements**
 
 Supported operations:
 
-- **Enqueue** (insert at the back)
-- **Dequeue** (remove from the front)
-- **Cancel** (remove specific record)
-- **Count** records, **iterate**
+<ul class="small">
+<li>**Enqueue** (insert at the back)</li>
+<li>**Dequeue** (remove from the front)</li>
+<li>**Cancel** (remove specific record)</li>
+<li>**Count** records, **iterate**</li>
+</ul>
 
 **Insertion order matters**, for both dequeue and iterate
 

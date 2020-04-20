@@ -12,6 +12,12 @@
 
 By the end of this module, students will be able to...
 
+- **Define** the following terms: linked list, node, head, tail, sentinel
+- **Describe** the structure of a linked list
+- **Describe** the implementation of various linked list operations
+- **Discuss** the role of a sentinel node in a linked list
+- **Use** a linked list to implement the queue interface
+
 ---
 
 ## Motivation

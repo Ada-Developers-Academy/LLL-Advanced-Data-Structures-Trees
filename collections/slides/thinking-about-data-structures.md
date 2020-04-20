@@ -8,6 +8,13 @@
 
 ## Learning Goals
 
+By the end of this module, students will be able to...
+
+- **Define** the terms data structure, interface, implementation, structure, algorithm, analysis
+- **Describe** this course's approach to studying data structures
+- **Distinguish** between interface, implementation and analysis
+
+
 ---
 
 ## What is a Data Structure?
@@ -97,8 +104,9 @@ const first = stack.pop();
 ### How does it work?
 
 - Structure
-
 - Algorithms
+
+The first step of implementation is design
 
 ---
 
@@ -108,11 +116,11 @@ const first = stack.pop();
 
 How is the data organized?
 
-- Classes, members, relations
-
-- Does this DS rely on another?
-
-- Draw a picture!
+<ul>
+<li>Classes, members, relations</li>
+<li>Does this DS rely on another?</li>
+<li>Draw a picture!</li>
+</ul>
 
 @snap[east span-40]
 ![avl tree](collections/images/tads-avl-tree.png)
@@ -127,9 +135,7 @@ How is the data organized?
 How do the methods work?
 
 - Edge cases
-
 - Testing
-
 - Draw a picture!
 
 @snap[east span-45]
@@ -160,15 +166,13 @@ Interested in **growth**:
 
 ---
 
-## Example: Queues
+## Studying DS
+
+![](collections/images/tads-study-workflow.png)
 
 In the next few modules we'll dive into each of those concepts deeper
 
-<br>
-
 As a running example we'll use a queue
-
-<br>
 
 If you don't quite recall how they work don't worry, we'll go through it piece by piece
 
@@ -178,11 +182,7 @@ If you don't quite recall how they work don't worry, we'll go through it piece b
 
 Finding the right DS for your problem is key
 
-<br>
-
 DS problems are great coding practice
-
-<br>
 
 When studying a new DS, we'll focus on **interface**, **implementation** and **analysis**
 

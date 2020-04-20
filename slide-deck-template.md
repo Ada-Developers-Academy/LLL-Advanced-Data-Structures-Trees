@@ -10,6 +10,8 @@
 
 By the end of this module, students will be able to...
 
+- **Define** the terms
+
 ---
 
 ## Summary
