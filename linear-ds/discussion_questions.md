@@ -41,6 +41,16 @@ The big difference is a stack removes elements in the opposite order of a queue.
     - What are the time and space complexities of `push` and `pop`?
     - Does an array-based stack leak memory like an array-based queue?
 
+## Priority Queues
+
+Imagine that each element in our queue data structure comes with a priority. When we dequeue an element, instead of the oldest element we want to get the one with the highest priority. If there's a tie then the oldest tied element should be dequeued. Iteration should also proceed in priority order.
+
+We might call such a data structure a **priority queue**.
+
+Priority queues are useful in all sorts of real-world situations, including process scheduling and pathfinding. They're so important that we'll dedicate an entire week to them later in the course!
+
+Based on what we know now, how might we implement a priority queue? What would the time and space complexities of various operations be?
+
 ## Extra
 
 These questions aren't very practical, but they are interesting! Borrowed from _Introduction to Algorithms_ by Cormen et al.
