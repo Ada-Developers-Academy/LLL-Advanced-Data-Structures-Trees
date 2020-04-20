@@ -123,7 +123,7 @@ How is the data organized?
 </ul>
 
 @snap[east span-40]
-![avl tree](collections/images/tads-avl-tree.png)
+![avl tree](linear-ds/images/tads-avl-tree.png)
 @snapend
 
 ---
@@ -139,7 +139,7 @@ How do the methods work?
 - Draw a picture!
 
 @snap[east span-45]
-![tree rotation](collections/images/tads-tree-rotation.png)
+![tree rotation](linear-ds/images/tads-tree-rotation.png)
 @snapend
 
 ---
@@ -161,14 +161,14 @@ Interested in **growth**:
 @snapend
 
 @snap[east span-30]
-![complexity graph](collections/images/tads-complexity-graphs.png)
+![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 @snapend
 
 ---
 
 ## Studying DS
 
-![](collections/images/tads-study-workflow.png)
+![](linear-ds/images/tads-study-workflow.png)
 
 In the next few modules we'll dive into each of those concepts deeper
 

@@ -81,7 +81,7 @@ We call the rate of growth **complexity**
 @snapend
 
 @snap[east span-30]
-![complexity graph](collections/images/tads-complexity-graphs.png)
+![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 @snapend
 
 ---
@@ -114,7 +114,7 @@ The goal is to connect our complex real-world performance to a **simpler mathema
 If our algorithm is `O(log n)`, its graph has a **similar shape** to the graph of the equation `log n`
 
 @snap[south span-80]
-![](collections/images/analysis-log-n.png)
+![](linear-ds/images/analysis-log-n.png)
 @snapend
 
 ---
@@ -154,7 +154,7 @@ Constant operations:
 @snap[east span-40 text-center]
 `O(1)`
 
-![complexity graph](collections/images/tads-complexity-graphs.png)
+![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
 <p class="small">The purple line is **constant**</p>
 @snapend
@@ -180,7 +180,7 @@ Logarithmic operations:
 @snap[east span-40 text-center]
 `O(log(n))`
 
-![complexity graph](collections/images/tads-complexity-graphs.png)
+![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
 <p class="small">The dark blue line is **logarithmic**</p>
 @snapend
@@ -208,7 +208,7 @@ Linear operations:
 @snap[east span-40 text-center]
 `O(n)`
 
-![complexity graph](collections/images/tads-complexity-graphs.png)
+![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
 <p class="small">The green line is **linear**</p>
 @snapend
@@ -235,7 +235,7 @@ Log-linear time operations:
 @snap[east span-40 text-center]
 <code>O(n\*log(n))</code>
 
-![complexity graph](collections/images/tads-complexity-graphs.png)
+![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
 <p class="small">The orange line is **log-linear**</p>
 @snapend
@@ -264,7 +264,7 @@ Polynomial operations:
 @snap[east span-40 text-center]
 `O(n^2)`, `O(n^3)`, ...
 
-![complexity graph](collections/images/tads-complexity-graphs.png)
+![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
 <p class="small">The red line is **polynomial**</p>
 @snapend
@@ -349,7 +349,7 @@ Exception: different inputs (`m` and `n`) don't dominate each other
 ## Sequence
 
 @snap[south span-100]
-![](collections/images/analysis-sequence.png)
+![](linear-ds/images/analysis-sequence.png)
 
 When `n` is large, all 3 curves look linear
 @snapend

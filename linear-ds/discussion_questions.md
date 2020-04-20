@@ -1,4 +1,4 @@
-# Collections Discussion Questions
+# Linear Data Structures Discussion Questions
 
 Please read through these before class, and come prepared to have a meaningful discussion with your peers
 

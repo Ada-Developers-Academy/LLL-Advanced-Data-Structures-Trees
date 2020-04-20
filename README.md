@@ -5,7 +5,7 @@ Ada Developers Academy Lovelace Learning Labs presents...
 
 ### Before the Course
 
-### Week 1 - Collections
+### Week 1 - Linear Data Structures
 
 **Before Class**
 - [Video Lecture]()
