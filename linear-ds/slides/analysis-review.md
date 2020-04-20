@@ -12,6 +12,12 @@
 
 By the end of this module, students will be able to...
 
+- **Define** the terms analysis, complexity, order, worst case
+- **Explain** how Big-O notation helps us compare algorithms
+- **Recognize** the graph shapes of common complexity orders
+- **Recall** the time complexity of various built-in operations
+- **Describe** how to compose operations to analyze the complexity of a function
+
 ---
 
 ## What is Analysis
@@ -74,9 +80,21 @@ When we analyze an algorithm, we're interested in growth
 - If I double the size of my input, how much longer will it take?
 - If I buy a computer with 4 times the memory, how much more data can I process?
 
-Every algorithm is different, but we can identify common shapes
+@snapend
+
+@snap[east span-30]
+![complexity graph](linear-ds/images/tads-complexity-graphs.png)
+@snapend
+
+---
+
+@snap[northwest span-70]
+
+## Growth Shapes
 
 We call the rate of growth **complexity**
+
+Every algorithm is different, but we can identify common shapes
 
 @snapend
 
@@ -182,7 +200,7 @@ Logarithmic operations:
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
-<p class="small">The dark blue line is **logarithmic**</p>
+<p class="small">The blue line is **logarithmic**</p>
 @snapend
 
 ---
@@ -237,7 +255,7 @@ Log-linear time operations:
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
-<p class="small">The orange line is **log-linear**</p>
+<p class="small">The orange line is <b>log-linear</b></p>
 @snapend
 
 ---
@@ -318,13 +336,7 @@ We **ignore** any coefficients (constant multipliers)
 
 <p class="small">They don't change the shape of the curve, just the angle</p>
 
-```txt zoom-12
-n*log(n) + n + 2n + 1 + 4n^2
-
-turns into
-
-n*log(n) + n + 1 + n^2
-```
+`\[ n*log(n) + n + 2n + 1 + 4n^2 \\ \text{turns into} \\ n*log(n) + n + 1 + n^2 \]`
 
 ---
 
@@ -334,13 +346,7 @@ The **fastest-growing** operation determines the order
 
 <p class="small">We say it **dominates** the complexity</p>
 
-```txt zoom-12
-n^2 + n*log(n) + n + 1
-
-turns into
-
-O(n^2)
-```
+`\[ n^2 + n*log(n) + n + 1 \\ \text{turns into} \\ O(n^2) \]`
 
 Exception: different inputs (`m` and `n`) don't dominate each other
 
@@ -363,7 +369,7 @@ When `n` is large, all 3 curves look linear
 const sortedEvens = (list) => {
   list = list.sort();
 
-  return list.filter(el => el % 2 === 0);
+  return list.filter((el) => el % 2 === 0);
 };
 ```
 
@@ -380,11 +386,11 @@ const sortedEvens = (list) => {
   list = list.sort();
 
   // O(n)
-  return list.filter(el => el % 2 === 0);
+  return list.filter((el) => el % 2 === 0);
 };
 ```
 
-Adding the pieces together gives <code>n*log(n) + n</code>.
+Adding the pieces together gives <code>n\*log(n) + n</code>.
 
 Since <code>n\*log(n)</code> grows faster it **dominates**
 
@@ -402,9 +408,9 @@ const sumEvenLengthsOfEveryTenthWord = (wordList) => {
 
     .filter((word, i) => i % 10 === 0)
 
-    .map(word => word.length)
+    .map((word) => word.length)
 
-    .filter(length => length % 2 === 0)
+    .filter((length) => length % 2 === 0)
 
     .reduce((memo, length) => memo + length, 0);
 };
@@ -414,7 +420,7 @@ const sumEvenLengthsOfEveryTenthWord = (wordList) => {
 
 ## Sequence
 
-`O(n)`
+`\[O(n)\]`
 
 ```js
 const sumEvenLengthsOfEveryTenthWord = (wordList) => {
@@ -428,7 +434,7 @@ const sumEvenLengthsOfEveryTenthWord = (wordList) => {
     // assume worst case: all words are even length
     // reduce n/10 words
     .reduce((memo, length) => memo + length, 0);
-  
+
   // Operations are in sequence, so we sum then drop the coefficient
   // n + n/10 + n/10 + n/10 = 1.3*n => O(n)
 };
@@ -453,7 +459,7 @@ What is the complexity?
 const countMatches = (list, target) => {
   let count = 0;
 
-  list.forEach(el => {
+  list.forEach((el) => {
     if (el === target) {
       count += 1;
     }
@@ -467,7 +473,7 @@ const countMatches = (list, target) => {
 
 ## Iteration
 
-`O(n)`
+`\[O(n)\]`
 
 ```js zoom-12
 // n is the length of the list
@@ -476,7 +482,7 @@ const countMatches = (list, target) => {
 
   // n * order of loop body (O(1))
   // => O(n)
-  list.forEach(el => {
+  list.forEach((el) => {
     if (el === target) {
       count += 1;
     }
@@ -495,8 +501,8 @@ What is the complexity?
 ```js zoom-12
 const allPairs = (list) => {
   const pairs = [];
-  list.forEach(left => {
-    list.forEach(right => {
+  list.forEach((left) => {
+    list.forEach((right) => {
       pairs.push([left, right]);
     });
   });
@@ -507,16 +513,16 @@ const allPairs = (list) => {
 
 ## Iteration
 
-`O(n^2)`
+`\[O(n^2)\]`
 
 ```js zoom-12
 const allPairs = (list) => {
   const pairs = [];
 
   // n times
-  list.forEach(left => {
+  list.forEach((left) => {
     // n times
-    list.forEach(right => {
+    list.forEach((right) => {
       // constant
       pairs.push([left, right]);
     });
@@ -531,6 +537,7 @@ const allPairs = (list) => {
 ## Summary
 
 For operations in sequence:
+
 <ul class="small">
 <li>Add complexities</li>
 <li>Drop coefficients</li>
@@ -538,6 +545,7 @@ For operations in sequence:
 </ul>
 
 For operations in a loop:
+
 <ul class="small">
 <li>Figure out complexity of the loop body</li>
 <li>Multiply by the number of iterations</li>
@@ -549,11 +557,12 @@ Always assume the worst case
 
 ## Vocab
 
-| Term | Definition |
-| ---- | ---------- |
-Analysis | Determining how much time or space is used by an algorithm
-Complexity | How the resources used by an algorithm grow
-Worst case | 
+| Term       | Definition                                                         |
+| ---------- | ------------------------------------------------------------------ |
+| Analysis   | Determining how much time or space is used by an algorithm         |
+| Complexity | How the resources used by an algorithm grow                        |
+| Order      | Simplest equation that has a growth curve similar to our algorithm |
+| Worst case | Analyzing the most expensive possibility                           |
 
 ---
 
@@ -576,6 +585,5 @@ Worst case |
 ## Credit
 
 [Analysis definition](https://en.wikipedia.org/wiki/Analysis)
-
 
 Additional: https://www.youtube.com/watch?v=D6xkbGLQesk
