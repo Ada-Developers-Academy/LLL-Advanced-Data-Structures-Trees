@@ -79,6 +79,15 @@ Inserting at the head is similar
 
 ---
 
+## Iterate
+
+1. Create a variable `node` pointing to the head
+1. While `node` is not `undefined`:
+    - Visit `node`
+    - Update `node` to reference the next node in the list, i.e. `node = node.next`
+
+---
+
 ## Remove
 
 Idea: "splice" the node out of the list

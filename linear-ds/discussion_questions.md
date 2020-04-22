@@ -1,4 +1,6 @@
-# Linear Data Structures Discussion Questions
+# Discussion Questions
+
+## Linear Data Structures 
 
 Please read through these before class, and come prepared to have a meaningful discussion with your peers
 
@@ -8,6 +10,7 @@ For each question we'll discuss in small groups, then as a big group
 
 - What questions or comments do you have after watching the video lectures?
 - What about JavaScript makes analysis difficult? What can we do to deal with this?
+- How would you iterate through a linked list recursively?
 - The video mentions that array insert is amortized `O(1)`, even though allocating a new buffer and copying existing elements is `O(n)`. How does this work?
 - Work with your group to design an array-based queue that doesn't leak memory. How does it work? What constraints does it have?
 
