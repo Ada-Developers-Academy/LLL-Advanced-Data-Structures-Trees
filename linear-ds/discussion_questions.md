@@ -8,11 +8,20 @@ For each question we'll discuss in small groups, then as a big group
 
 ## General
 
-- What questions or comments do you have after watching the video lectures?
-- What about JavaScript makes analysis difficult? What can we do to deal with this?
-- How would you iterate through a linked list recursively?
-- The video mentions that array insert is amortized `O(1)`, even though allocating a new buffer and copying existing elements is `O(n)`. How does this work?
-- Work with your group to design an array-based queue that doesn't leak memory. How does it work? What constraints does it have?
+1. Introduce yourself to your group!
+1. What questions or comments do you have after watching the video lectures?
+1. What about JavaScript makes analysis difficult? What can we do to deal with this?
+1. How would you iterate through a linked list _recursively_?
+    - What are the time and space complexities of recursive iteration?
+1. We say two data structures are _equivalent_ if they contain the same records in the same order.
+    - How would you check if two queues are equivalent?
+    - Is it possible for two queues of the same class with a different internal structure to be equivalent?
+1. How would you _serialize_ a linked list - that is, turn it into a string of characters that could be saved to a file or sent over the network? 
+    - What assumptions do you need to make?
+    - What are the space and time complexity of serialization?
+    - What does _deserialization_ (turning a string back into a linked list) look like?
+1. Work with your group to design an array-based queue that doesn't leak memory. How does it work? What constraints does it have?
+1. The video mentions that array insert is amortized `O(1)`, even though allocating a new buffer and copying existing elements is `O(n)`. How does this work?
 
 ## Stacks
 
@@ -37,12 +46,12 @@ The big difference is a stack removes elements in the opposite order of a queue.
 
 ### Questions
 
-- How would you implement a stack with a linked list?
-    - What are the time and space complexities of `push` and `pop`?
-    - Do you still need a doubly-linked list?
-- How would you implement a stack with an array?
-    - What are the time and space complexities of `push` and `pop`?
-    - Does an array-based stack leak memory like an array-based queue?
+1. How would you implement a stack with a linked list?
+    1. What are the time and space complexities of `push` and `pop`?
+    1. Do you still need a doubly-linked list?
+1. How would you implement a stack with an array?
+    1. What are the time and space complexities of `push` and `pop`?
+    1. Does an array-based stack leak memory like an array-based queue?
 
 ## Priority Queues
 
@@ -58,5 +67,5 @@ Based on what we know now, how might we implement a priority queue? What would t
 
 These questions aren't very practical, but they are interesting! Borrowed from _Introduction to Algorithms_ by Cormen et al.
 
-- Explain how to implement a queue using two stacks. Analyze the time complexity of enqueue and dequeue.
-- Explain how to implement a stack using two queues. Analyze the time complexity of push and pop.
+1. Explain how to implement a queue using two stacks. Analyze the time complexity of enqueue and dequeue.
+1. Explain how to implement a stack using two queues. Analyze the time complexity of push and pop.
