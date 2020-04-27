@@ -159,7 +159,7 @@ Generally beyond the scope of this course
 
 ## The Queue
 
-Pause the video and answer the following questions about our queue data structure:
+Pause the video and answer the following questions about our queue interface:
 
 - What **type of records** are we storing?
 - What **operations** do we need to support?

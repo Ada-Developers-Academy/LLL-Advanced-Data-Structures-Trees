@@ -1,5 +1,9 @@
 @snap[midpoint]
-# Topic
+# Binary Trees
 @snapend
 
-<!-- ---?include=topic/slides/intro.md -->
+---?include=binary-trees/slides/intro.md
+
+---?include=binary-trees/slides/ordered-dict-interface.md
+
+---?include=binary-trees/slides/bst-design.md

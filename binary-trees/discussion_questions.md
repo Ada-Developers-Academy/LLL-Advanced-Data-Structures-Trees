@@ -16,8 +16,9 @@ For each question we'll discuss in small groups, then as a big group
     - How would this change for an RBT?
     - Is it possible for two BSTs or RBTs with different internal structures to be equivalent?
 1. How would you _serialize_ and _deserialize_ a BST?
-    - What about an RBT?
+    - What about an RBT? Do you need to record node color?
     - What are the time and space complexities of these operations?
+1. How would we need to adjust our tree interface and implementation to permit repeat keys?
 
 ## Sub-topic 1
 
