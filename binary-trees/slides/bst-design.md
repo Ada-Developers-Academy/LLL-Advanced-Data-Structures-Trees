@@ -36,24 +36,24 @@ If not, what can we learn from them?
 
 Could store elements in **insertion order**
 
-<p class="small">Insert is `O(1)`, but lookup is `O(n)` and iterate is `O(n log(n))`</p>
+<p class="small">Insert is `\(O(1)\)`, but lookup is `\(O(n)\)` and iterate is `\(O(n*log(n))\)`</p>
 
 <br>
 
 <div class="fragment">
 <p>Could store elements in **sorted order**</p>
 
-<p class="small">Lookup is `O(log(n))` via binary search, iterate is `O(n)`</p>
-<p class="small">Insert is `O(n)` - need to search for the right spot, move following records to make a hole</p>
+<p class="small">Lookup is `\(O(log(n))\)` via binary search, iterate is `\(O(n)\)`</p>
+<p class="small">Insert is `\(O(n)\)` - need to search for the right spot, move following records to make a hole</p>
 </div>
 
 ---
 
 ## Linked Lists
 
-Once we know where to put it, adding a node is `O(1)`
+Once we know where to put it, adding a node is `\(O(1)\)`
 
-Lookup by key is always `O(n)`
+Lookup by key is always `\(O(n)\)`
 
 Linked lists really only work for stacks and queues
 
@@ -65,7 +65,7 @@ Maybe we can take some of the principles and apply them elsewhere...
 
 Insert and lookup are constant!
 
-Iterate is `O(n log(n))` - need to sort first
+Iterate is `\(O(n*log(n))\)` - need to sort first
 
 Not too useful - we have to make too many tradeoffs to get constant access
 
@@ -76,16 +76,16 @@ Not too useful - we have to make too many tradeoffs to get constant access
 Records must be **stored in sorted order**
 
 <ul class="small">
-<li>Otherwise iterate requires an `O(n log(n))` sort</li>
-<li>Lets us use **binary search** for `O(log(n))` lookups</li>
+<li>Otherwise iterate requires an `\(O(n*log(n))\)` sort</li>
+<li>Lets us use **binary search** for `\(O(log(n))\)` lookups</li>
 </ul>
 
 <div class="fragment">
 <p>Maybe we could **store records in nodes**</p>
 <ul class="small">
 <li>Similar to a linked list</li>
-<li>Insert could be an `O(log(n))` lookup plus an `O(1)` node add</li>
-<li>Lookup and delete are similarly `O(log(n))`</li>
+<li>Insert could be an `\(O(log(n))\)` lookup plus an `\(O(1)\)` node add</li>
+<li>Lookup and delete are similarly `\(O(log(n))\)`</li>
 </ul>
 </div>
 
@@ -107,7 +107,7 @@ Imagine we have a sorted array of integers, and we want to check whether it cont
 
 ![](binary-trees/images/array-linear-search.png)
 
-What is the time complexity of linear search? `O(n)`
+What is the time complexity of linear search? `\(O(n)\)`
 
 ---
 
@@ -117,9 +117,9 @@ If our array is sorted, we can do better!
 
 ![](binary-trees/images/array-binary-search.png)
 
-At each step we cut the search space in half
+Binary search is `\(O(log(n))\)`
 
-`\[ log_2(n) = \text{how many times can you cut } n \text{ in half?} \]`
+`\(log_2(n)\)`: how many times can you cut `\(n\)` in half?
 
 ---
 

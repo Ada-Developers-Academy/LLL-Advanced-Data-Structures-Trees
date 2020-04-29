@@ -160,13 +160,13 @@ Trying to `remove` an inactive node does nothing
 
 | Operation                 | Time       | Change in Space  |
 | ------------------------- | ---------- | ---------------- |
-| Insert (head or tail)     | `O(1)`     | Adds `O(1)`      |
-| Insert (random)           | `O(n)`     | Adds `O(1)`      |
-| Find node for element     | `O(n)`     | None             |
-| **Remove (head or tail)** | **`O(1)`** | **Frees `O(1)`** |
-| **Remove by node**        | **`O(1)`** | **Frees `O(1)`** |
-| Remove by element         | `O(n)`     | Frees `O(1)`     |
-| Iterate                   | `O(n)`     | None             |
+| Insert (head or tail)     | `\(O(1)\)`     | Adds `\(O(1)\)`      |
+| Insert (random)           | `\(O(n)\)`     | Adds `\(O(1)\)`      |
+| Find node for element     | `\(O(n)\)`     | None             |
+| **Remove (head or tail)** | **`\(O(1)\)`** | **Frees `\(O(1)\)`** |
+| **Remove by node**        | **`\(O(1)\)`** | **Frees `\(O(1)\)`** |
+| Remove by element         | `\(O(n)\)`     | Frees `\(O(1)\)`     |
+| Iterate                   | `\(O(n)\)`     | None             |
 
 ---
 

@@ -72,7 +72,7 @@ Garbage collector, JIT compiler
 
 Dynamic resizing - grows automatically (typically doubles at powers of two), never shrinks
 
-Append is **amortized** O(1)
+Append is **amortized** `\(O(1)\)`
 
 <p class="small">Amortized: "this is the average, but it's possible the worst case will be really bad"</p>
 

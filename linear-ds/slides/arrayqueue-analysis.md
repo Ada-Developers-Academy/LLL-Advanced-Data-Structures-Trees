@@ -49,7 +49,7 @@ enqueue(element) {
 
 <div class="fragment">
 <p>Constant time, constant space</p>
-<p class="small">Remember, array insert is amortized `O(1)`</p>
+<p class="small">Remember, array insert is amortized `\(O(1)\)`</p>
 </div>
 
 ---
@@ -60,12 +60,12 @@ It's often useful to analyze **workflows** in addition to individual operations
 
 What are the time and space complexities of...
 
-Enqueueing `n` elements?
+Enqueueing `\(n\)` elements?
 
 <p class="small">No dequeues or cancels yet</p>
 
 <div class="fragment">
-<p>`O(n)` time, `O(n)` space</p>
+<p>`\(O(n)\)` time, `\(O(n)\)` space</p>
 <p>This is what we would expect</p>
 </div>
 
@@ -98,9 +98,9 @@ What are the time and space complexities of...
 Enqueueing and then canceling n elements?
 
 <div class="fragment">
-<p>`O(n)` time (as expected)</p>
-<p>`O(n)` space (not so good)</p>
-<p class="small">The number of elements in the queue is `0`, but we use `n` space!</p>
+<p>`\(O(n)\)` time (as expected)</p>
+<p>`\(O(n)\)` space (not so good)</p>
+<p class="small">The number of elements in the queue is `\(0\)`, but we use `\(n\)` space!</p>
 </div>
 
 ## TODO Picture
@@ -111,13 +111,13 @@ Enqueueing and then canceling n elements?
 
 | Term | Meaning                                                            |
 | ---- | ------------------------------------------------------------------ |
-| `n`  | Number of elements **currently** in the queue                      |
-| `c`  | Number of elements that have been **canceled**                    |
-| `d`  | Number of elements that have been **dequeued**                     |
-| `h`  | Total number of elements we've **ever** enqueued (`h` for history) |
+| `\(n\)`  | Number of elements **currently** in the queue                      |
+| `\(c\)`  | Number of elements that have been **canceled**                    |
+| `\(d\)`  | Number of elements that have been **dequeued**                     |
+| `\(h\)`  | Total number of elements we've **ever** enqueued (`\(h\)` for history) |
 
 @snap[south-west span-100]
-Invariant: `n + c + d = h`
+Invariant: `\(n + c + d = h\)`
 
 <p class="small">An **invariant** is something that's always true about your code</p>
 @snapend
@@ -130,9 +130,9 @@ What are the time and space complexities of...
 
 Enqueueing and then canceling c elements?
 
-<p>`O(c)` time (as expected)</p>
-<p>`O(c)` space (not so good)</p>
-<p class="small">`n = 0, c = h`</p>
+<p>`\(O(c)\)` time (as expected)</p>
+<p>`\(O(c)\)` space (not so good)</p>
+<p class="small">`\(n = 0, \quad c = h\)`</p>
 
 ---
 
@@ -166,7 +166,7 @@ Constant space, but doesn't free memory
 
 Same memory leak problem as cancelation
 
-A workflow of `d` enqueues and dequeues uses `d` memory to store `0` objects
+A workflow of `\(d\)` enqueues and dequeues uses `\(d\)` memory to store `\(0\)` objects
 
 ## TODO picture
 
@@ -174,7 +174,7 @@ A workflow of `d` enqueues and dequeues uses `d` memory to store `0` objects
 
 ## Dequeue - Time
 
-All `O(1)` except for the while loop
+All `\(O(1)\)` except for the while loop
 
 ```js zoom-12
 // skip canceled elements at the front of the queue
@@ -187,8 +187,8 @@ while (this.head < this.tail && this.storage[this.head] === undefined) {
 Depends on our workflow - what is the **worst case**?
 
 <div class="fragment">
-<p>`c` canceled elements at the head of the queue</p>
-<p>Dequeue is `O(c)`</p>
+<p>`\(c\)` canceled elements at the head of the queue</p>
+<p>Dequeue is `\(O(c)\)`</p>
 </div>
 
 <p class="small fragment">It's not quite as bad as it sounds</p>
@@ -197,7 +197,7 @@ Depends on our workflow - what is the **worst case**?
 
 ## Dequeue Workflow
 
-Enqueue `h`, then cancel or dequeue everything
+Enqueue `\(h\)`, then cancel or dequeue everything
 
 `\[n = 0,\quad h = c + d\]`
 
@@ -254,9 +254,9 @@ O\left(\frac{c}{d}\right) = O(499) = O(1)
 
 | Resource | Type       | Complexity | Note                        |
 | -------- | ---------- | ---------- | --------------------------- |
-| Space    | Always     | `O(1)`     | Doesn't free space          |
-| Time     | Worst-case | `O(c)`     |                             |
-| Time     | Amortized  | `O(1)`     | Assumes consistent workflow |
+| Space    | Always     | `\(O(1)\)`     | Doesn't free space          |
+| Time     | Worst-case | `\(O(c)\)`     |                             |
+| Time     | Amortized  | `\(O(1)\)`     | Assumes consistent workflow |
 
 ---
 

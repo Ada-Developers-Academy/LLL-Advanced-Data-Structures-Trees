@@ -110,14 +110,14 @@ Growth is always **in terms of** something
 
 Usually the number of **inputs** or **operations**
 
-We'll use letters (usually `n`, `m`, `k`, etc) to represent these numbers
+We'll use letters (usually `\(n\)`, `\(m\)`, `\(k\)`, etc) to represent these numbers
 
 <ul class="small">
-<li>How much space does our queue take to store `n` records?</li>
-<li>If our queue contains `n` records, how long does it take to do `m` dequeues?</li>
+<li>How much space does our queue take to store `\(n\)` records?</li>
+<li>If our queue contains `\(n\)` records, how long does it take to do `\(m\)` dequeues?</li>
 </ul>
 
-Always ask what `n` is!
+Always ask what `\(n\)` is!
 
 ---
 
@@ -129,7 +129,7 @@ The goal is to connect our complex real-world performance to a **simpler mathema
 
 <p class="small">We'll call the simpler equation the **order** our algorithm</p>
 
-If our algorithm is `O(log n)`, its graph has a **similar shape** to the graph of the equation `log n`
+If our algorithm is `\(O(log(n))\)`, its graph has a **similar shape** to the graph of the equation `\(log(n)\)`
 
 @snap[south span-80]
 ![](linear-ds/images/analysis-log-n.png)
@@ -170,7 +170,7 @@ Constant operations:
 @snapend
 
 @snap[east span-40 text-center]
-`O(1)`
+`\(O(1)\)`
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
@@ -196,7 +196,7 @@ Logarithmic operations:
 @snapend
 
 @snap[east span-40 text-center]
-`O(log(n))`
+`\(O(log(n))\)`
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
@@ -224,7 +224,7 @@ Linear operations:
 @snapend
 
 @snap[east span-40 text-center]
-`O(n)`
+`\(O(n)\)`
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
@@ -251,7 +251,7 @@ Log-linear time operations:
 @snapend
 
 @snap[east span-40 text-center]
-<code>O(n\*log(n))</code>
+`\(O(n*log(n))\)`
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
@@ -271,16 +271,16 @@ A polynomial operation grows faster when its input is bigger
 Polynomial operations:
 
 <ul class="small">
-<li>Comparing all the pairs of elements in two lists of size `n` takes `O(n^2)` time</li>
+<li>Comparing all the pairs of elements in two lists of size `\(n\)` takes `\(O(n^2)\)` time</li>
 <li>Nested loops often take polynomial time</li>
 </ul>
 
-<p class="small">`O(n^2)` is often called **quadratic**</p>
+<p class="small">`\(O(n^2)\)` is often called **quadratic**</p>
 
 @snapend
 
 @snap[east span-40 text-center]
-`O(n^2)`, `O(n^3)`, ...
+`\(O(n^2)`, `O(n^3)\)`, ...
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
@@ -291,13 +291,13 @@ Polynomial operations:
 
 ## Orders
 
-| Order                     | Name        | Growth                     | Operations        |
-| ------------------------- | ----------- | -------------------------- | ----------------- |
-| `O(1)`                    | Constant    | None!                      | Do one thing      |
-| `O(log(n))`               | Logarithmic | Slower than input          | Binary search     |
-| `O(n)`                    | Linear      | Same as input              | Loop over list    |
-| <code>O(n\*log(n))</code> | Log-linear  | Slightly faster than input | Sort a list       |
-| `O(n^2)`                  | Polynomial  | Much faster than input     | Compare two lists |
+| Order             | Name        | Growth                     | Operations        |
+| ----------------- | ----------- | -------------------------- | ----------------- |
+| `\(O(1)\)`        | Constant    | None!                      | Do one thing      |
+| `\(O(log(n))\)`   | Logarithmic | Slower than input          | Binary search     |
+| `\(O(n)\)`        | Linear      | Same as input              | Loop over list    |
+| `\(O(n*log(n))\)` | Log-linear  | Slightly faster than input | Sort a list       |
+| `\(O(n^2)\)`      | Polynomial  | Much faster than input     | Compare two lists |
 
 ---
 
@@ -348,7 +348,7 @@ The **fastest-growing** operation determines the order
 
 `\[ n^2 + n*log(n) + n + 1 \\ \text{turns into} \\ O(n^2) \]`
 
-Exception: different inputs (`m` and `n`) don't dominate each other
+Exception: different inputs (`\(m\)` and `\(n\)`) don't dominate each other
 
 ---
 
@@ -357,7 +357,7 @@ Exception: different inputs (`m` and `n`) don't dominate each other
 @snap[south span-100]
 ![](linear-ds/images/analysis-sequence.png)
 
-When `n` is large, all 3 curves look linear
+When `\(n\)` is large, all 3 curves look linear
 @snapend
 
 ---
@@ -390,11 +390,11 @@ const sortedEvens = (list) => {
 };
 ```
 
-Adding the pieces together gives <code>n\*log(n) + n</code>.
+Adding the pieces together gives `\(n*log(n) + n\)`
 
-Since <code>n\*log(n)</code> grows faster it **dominates**
+Since `\(n*log(n)\)` grows faster it **dominates**
 
-This function is <code>O(n\*log(n))</code>
+This function is `\(O(n*log(n))\)`
 
 ---
 
@@ -568,13 +568,13 @@ Always assume the worst case
 
 ## Orders
 
-| Order                     | Name        | Growth                     | Operations        |
-| ------------------------- | ----------- | -------------------------- | ----------------- |
-| `O(1)`                    | Constant    | None!                      | Do one thing      |
-| `O(log(n))`               | Logarithmic | Slower than input          | Binary search     |
-| `O(n)`                    | Linear      | Same as input              | Loop over list    |
-| <code>O(n\*log(n))</code> | Log-linear  | Slightly faster than input | Sort a list       |
-| `O(n^2)`                  | Polynomial  | Much faster than input     | Compare two lists |
+| Order              | Name        | Growth                     | Operations        |
+| ------------------ | ----------- | -------------------------- | ----------------- |
+| `\(O(1)\)`         | Constant    | None!                      | Do one thing      |
+| `\(O(log(n))\)`    | Logarithmic | Slower than input          | Binary search     |
+| `\(O(n)\)`         | Linear      | Same as input              | Loop over list    |
+| `\(O(n*log(n))\)` | Log-linear  | Slightly faster than input | Sort a list       |
+| `\(O(n^2)\)`       | Polynomial  | Much faster than input     | Compare two lists |
 
 ---
 

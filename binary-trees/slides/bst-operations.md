@@ -62,9 +62,9 @@ lookup(key) {
 How long does lookup take to run?
 
 <div class="fragment">
-<p>It's doing a binary search, so `O(log(n))` right?</p>
+<p>It's doing a binary search, so `\(O(log(n))\)` right?</p>
 
-<p class="small">`n` is the number of nodes in the tree</p>
+<p class="small">`\(n\)` is the number of nodes in the tree</p>
 </div>
 
 <p class="fragment">What is the **worst case scenario**?</p>
