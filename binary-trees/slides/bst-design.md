@@ -14,7 +14,6 @@ By the end of this module, students will be able to...
 
 - **Define** the terms
 
-
 ---
 
 ## Is It Easy?
@@ -75,6 +74,7 @@ Not too useful - we have to make too many tradeoffs to get constant access
 ## Learn from Experience
 
 Records must be **stored in sorted order**
+
 <ul class="small">
 <li>Otherwise iterate requires an `O(n log(n))` sort</li>
 <li>Lets us use **binary search** for `O(log(n))` lookups</li>
@@ -93,6 +93,74 @@ Records must be **stored in sorted order**
 
 ---
 
+## Search Review
+
+The core idea of binary search is essential to understanding trees, so let's review it before going further
+
+---
+
+## Linear Search
+
+Imagine we have a sorted array of integers, and we want to check whether it contains the value `42`. How do we find out?
+
+**Linear search**: start on the left, look at values one by one until you find your target or run out of array.
+
+![](binary-trees/images/array-linear-search.png)
+
+What is the time complexity of linear search? `O(n)`
+
+---
+
+## Binary Search
+
+If our array is sorted, we can do better!
+
+![](binary-trees/images/array-binary-search.png)
+
+At each step we cut the search space in half
+
+`\[ log_2(n) = \text{how many times can you cut } n \text{ in half?} \]`
+
+---
+
+## Binary Search
+
+We can think of binary search as following a "path" through the data
+
+![](binary-trees/images/array-to-bst.png)
+
+<p class="small">Go right, then left, then right</p>
+
+---
+
+## Binary Search Tree
+
+If we turn each potential "decision point" in the path into a node, we have a **binary search tree**
+
+![](binary-trees/images/bst-transformed.png)
+
+---
+
+![wide](binary-trees/images/TreeVocabulary.png)
+
+---
+
+## BST Notes
+
+A tree (or subtree) is **balanced** if it has the same number of descendants on its left as on its right
+
+<p class="small">As we'll see, balance is key for performance</p>
+
+<div class="fragment">
+<p>Subtrees are important - each subtree is itself a tree</p>
+
+<p class="small">A subtree can have size 1 or even 0</p>
+
+<p class="small">That means **recursion** will be a useful tool</p>
+</div>
+
+---
+
 ## Summary
 
 ---
@@ -101,6 +169,7 @@ Records must be **stored in sorted order**
 
 | Term | Definition |
 | ---- | ---------- |
+
 
 ---
 
