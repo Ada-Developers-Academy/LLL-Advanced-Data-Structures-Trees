@@ -29,6 +29,7 @@ Any node reference may be `undefined`
 ---
 
 @snap[northwest span-45]
+
 ## Lookup
 
 Walk down a path, choosing left or right each time
@@ -39,6 +40,7 @@ Stop when we find what we're looking for, or find the bottom of the tree
 @snapend
 
 @snap[east text-left span-50]
+
 ```js
 lookup(key) {
   let node = this.root;
@@ -54,6 +56,7 @@ lookup(key) {
   }
 }
 ```
+
 @snapend
 
 ---
@@ -94,14 +97,14 @@ How many comparisons to find `42`?
 
 ## Height
 
-`lookup` time is linear in the height `\(h\)` of the tree
+The height `\(h\)` of the tree is the biggest number of nodes on a path between the root an a leaf
 
 `\[
-h =
-\begin{cases}
-O(log(n)) & \quad \text{for a } balanced \text{ tree} \\
-O(n)      & \quad \text{for an } unbalanced \text{ tree}
-\end{cases}
+  h = 
+  \begin{cases}
+    O(log(n)) & \quad \text{for a } mostly\ balanced \text{ tree} \\
+    O(n) & \quad \text{for an } unbalanced \text{ tree}
+  \end{cases}
 \]`
 
 As long as the tree is "mostly balanced", lookup is still `\(O(log(n))\)`
@@ -114,7 +117,7 @@ The shape of the tree depends on insertion order
 
 ## Insert
 
-Very similar to `lookup`
+Very similar to `lookup`, still `\(O(log(h))\)` time
 
 If you find the target, replace its value
 
@@ -158,11 +161,123 @@ Run time is still `\(O(log(n))\)`
 
 **Question:** Why didn't we have to do extra work for `insert`?
 
-<p class="fragment">With `delete` we need to worry about children. `insert` always adds a node to the bottom of the tree, so children aren't a concern</p>
+<p class="fragment small">With `delete` we need to worry about children. `insert` always adds a node to the bottom of the tree, so children aren't a concern.</p>
+
+---
+
+## Space Workflows
+
+`insert` allocates one node (constant space)
+
+Inserting `\(n\)` records allocates `\(O(n)\)` space
+
+`delete` frees the node, so `\(n\)` `insert`s and `\(n\)` `delete`s takes constant space
+
+---
+
+## Iterate
+
+Remember the BST property
+
+<p class="small">All nodes on the left come before, all nodes on the right come after</p>
+
+<p class="small">A node plus all its descendants are a **subtree**</p>
+
+Idea: recursive function to visit a subtree
+
+<ol>
+<li>Visit the left subtree</li>
+<li>Do the thing to this node</li>
+<li>Visit the right subtree</li>
+<li>(Return to the parent)</li>
+</ol>
+
+---
+
+## Iterate
+
+```js
+forEach(callback) {
+  const visitSubtree = (node, callback) => {
+    if (node) {
+      visitSubtree(node.left, callback);
+      callback(node.key, node.value);
+      visitSubtree(node.right, callback);
+    }
+  }
+  visitSubtree(this.root, callback)
+}
+```
+
+**Question:** How does this algorithm know when to stop?
+
+---
+
+## Iterate Time
+
+What is the time complexity of `iterate`?
+
+<div class="fragment">
+<p>It visits every node once, so `\(O(n)\)`</p>
+</div>
+
+---
+
+## Iterate Space
+
+What is the space complexity of `iterate`?
+
+<p class="small">Hint: remember the **program stack**</p>
+
+<ul class="fragment small">
+<li>Every time we make a recursive call we add a stack frame</li>
+<li>Every time we return we remove a stack frame</li>
+<li>What is the maximum stack depth?</li>
+</ul>
+
+<p class="fragment">The height of the tree!</p>
+
+---
+
+## BST Complexity
+
+| Operation                             | Time         | Space      |
+| ------------------------------------- | ------------ | ---------- |
+| `lookup`                              | `\(O(h)\)`   | `\(O(1)\)` |
+| `insert`                              | `\(O(h)\)`   | `\(O(1)\)` |
+| `delete`                              | `\(O(h)\)`   | `\(O(1)\)` |
+| `forEach`                             | `\(O(n)\)`   | `\(O(h)\)` |
+| `\(n\)` `inserts`                     | `\(O(n*h)\)` | `\(O(n)\)` |
+| `\(n\)` `inserts` + `\(n\)` `deletes` | `\(O(n*h)\)` | `\(O(1)\)` |
+
+@snap[south span-100]
+@math
+`\[
+  h = 
+  \begin{cases}
+    O(log(n)) & \quad \text{for a } mostly\ balanced \text{ tree} \\
+    O(n) & \quad \text{for an } unbalanced \text{ tree}
+  \end{cases}
+\]`
+@mathend
+@snapend
 
 ---
 
 ## Summary
+
+The height `\(h\)` of a tree is the longest distance from the root to a leaf
+
+The complexity of most BST operations depends on the height of the tree
+
+<ul class="small">
+<li>Single-record operations (`lookup`, `insert`, `delete`) take `\(O(h)\)` time</li>
+<li>Iteration takes `\(O(h)\)` space due to the stack</li>
+</ul>
+
+The height is usually `\(O(log(n))\)`, but can be as bad as `\(O(n)\)`
+
+<p class="small fragment">In the next section we'll discuss a technique for keeping a BST balanced</p>
 
 ---
 
@@ -171,6 +286,8 @@ Run time is still `\(O(log(n))\)`
 | Term | Definition |
 | ---- | ---------- |
 
+Height
+Balanced
 Expected
 Pathological
 

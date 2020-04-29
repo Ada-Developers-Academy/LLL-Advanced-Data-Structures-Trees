@@ -161,6 +161,16 @@ A tree (or subtree) is **balanced** if it has the same number of descendants on 
 
 ---
 
+## BST Property
+
+For every node...
+
+All nodes in the node's left child's subtree have a key less than that node's key
+
+All nodes in the right subtree have a greater key
+
+---
+
 ## BST Visualizer
 
 https://www.cs.usfca.edu/~galles/visualization/BST.html
