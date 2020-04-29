@@ -161,6 +161,12 @@ A tree (or subtree) is **balanced** if it has the same number of descendants on 
 
 ---
 
+## BST Visualizer
+
+https://www.cs.usfca.edu/~galles/visualization/BST.html
+
+---
+
 ## Summary
 
 ---
