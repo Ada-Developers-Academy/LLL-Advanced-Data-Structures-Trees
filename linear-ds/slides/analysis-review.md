@@ -170,7 +170,9 @@ Constant operations:
 @snapend
 
 @snap[east span-40 text-center]
+@math
 `\(O(1)\)`
+@mathend
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
@@ -196,7 +198,9 @@ Logarithmic operations:
 @snapend
 
 @snap[east span-40 text-center]
+@math
 `\(O(log(n))\)`
+@mathend
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
@@ -224,7 +228,9 @@ Linear operations:
 @snapend
 
 @snap[east span-40 text-center]
+@math
 `\(O(n)\)`
+@mathend
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
@@ -251,7 +257,9 @@ Log-linear time operations:
 @snapend
 
 @snap[east span-40 text-center]
+@math
 `\(O(n*log(n))\)`
+@mathend
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
@@ -280,7 +288,9 @@ Polynomial operations:
 @snapend
 
 @snap[east span-40 text-center]
-`\(O(n^2)`, `O(n^3)\)`, ...
+@math
+`\(O(n^2),  O(n^3), ...\)`
+@mathend
 
 ![complexity graph](linear-ds/images/tads-complexity-graphs.png)
 
@@ -357,7 +367,9 @@ Exception: different inputs (`\(m\)` and `\(n\)`) don't dominate each other
 @snap[south span-100]
 ![](linear-ds/images/analysis-sequence.png)
 
-When `\(n\)` is large, all 3 curves look linear
+@math
+<p>When `\(n\)` is large, all 3 curves look linear</p>
+@mathend
 @snapend
 
 ---
