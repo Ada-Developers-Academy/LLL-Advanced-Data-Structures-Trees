@@ -35,7 +35,7 @@ Tree + Node classes
 
 Binary search tree property
 
-Visualizer
+Visualizer# 
 http://btv.melezinek.cz/binary-search-tree.html
 
 ### Implementation
