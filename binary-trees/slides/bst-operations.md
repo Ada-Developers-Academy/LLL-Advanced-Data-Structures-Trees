@@ -12,7 +12,10 @@
 
 By the end of this module, students will be able to...
 
-- **Define** the terms
+- **Define** the terms depth, leaf, balanced, height, expected, pathological
+- **Identify** whether a tree is balanced or unbalanced
+- **Describe** the time and space complexity of tree operations
+- **Explain** why it's important to keep a BST balanced
 
 ---
 
@@ -103,7 +106,7 @@ We'll define these terms:
 
 - Depth
 - Leaf
-- Balance
+- Balanced
 - Height
 
 ---
@@ -205,7 +208,6 @@ h =
 <br>
 
 <p class="small">Intuitively, in a balanced tree most nodes split the search space, while in an unbalanced tree most nodes do not</p>
-
 
 <!-- <p class="small">The formal proof relies on induction on the height of a node's subtree</p> -->
 </div>
@@ -368,13 +370,7 @@ What is the space complexity of `iterate`?
 
 @snap[south span-100]
 @math
-`\[
-  h = 
-  \begin{cases}
-    O(log(n)) & \quad \text{for a balanced tree} \\
-    O(n) & \quad \text{for an unbalanced tree}
-  \end{cases}
-\]`
+`\[ h = \begin{cases} O(log(n)) & \quad \text{for a balanced tree} \\ O(n) & \quad \text{for an unbalanced tree} \end{cases} \]`
 @mathend
 @snapend
 
@@ -382,7 +378,7 @@ What is the space complexity of `iterate`?
 
 ## Summary
 
-The height `\(h\)` of a tree is the longest distance from the root to a leaf
+The height `\(h\)` of a tree is the max depth of a non-leaf node
 
 The complexity of most BST operations depends on the height of the tree
 
@@ -399,13 +395,14 @@ The height is usually `\(O(log(n))\)`, but can be as bad as `\(O(n)\)`
 
 ## Vocab
 
-| Term | Definition |
-| ---- | ---------- |
-
-Height
-Balanced
-Expected
-Pathological
+| Term         | Definition                             |
+| ------------ | -------------------------------------- |
+| Depth        | Distance from a node to the root       |
+| Leaf         | An empty child                         |
+| Balanced     | Tree where all leaf depths are similar |
+| Height       | Maximum (non-leaf) node depth          |
+| Expected     | Average across all possibilities       |
+| Pathological | Intentionally constructed worst case   |
 
 ---
 
