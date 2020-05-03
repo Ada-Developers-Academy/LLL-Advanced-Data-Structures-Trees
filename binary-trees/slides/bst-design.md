@@ -143,6 +143,10 @@ If we turn each potential "decision point" in the path into a node, we have a **
 
 ![wide](binary-trees/images/TreeVocabulary.png)
 
+@snap[south span-100]
+We will use a slightly different definition of **leaf**
+@snapend
+
 ---
 
 ## BST Notes

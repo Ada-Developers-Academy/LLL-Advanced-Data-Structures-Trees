@@ -49,7 +49,7 @@ layout : top-left
 # Footnote Setting
 # Doc: https://gitpitch.com/docs/settings/footnote
 #
-footnote : "LLL - Advanced Data Structures Trees - Week 1: Linear Data Structures"
+footnote : "LLL - Advanced Data Structures Trees - Week 2: Binary Search Trees"
 footnote-position : bottom-right
 
 # Turn on MathJax plugin

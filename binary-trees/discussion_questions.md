@@ -10,6 +10,7 @@ For each question we'll discuss in small groups, then as a big group
 
 1. Introduce yourself to your group!
 1. What questions or comments do you have after watching the video lectures?
+1. Do all binary trees of size `n` have the same number of leaves (empty children)? Make a convincing argument or find a counter-example.
 1. What would it look like to augment our BST or RBT with a custom comparison function, that is, relying on a user-defined order instead of a natural one? Does this change the time or space complexity of our operations?
 1. How would you check _equivalence_ for two BSTs?
     - Analyze the time and space complexity
