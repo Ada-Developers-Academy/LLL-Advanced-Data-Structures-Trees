@@ -9,3 +9,5 @@
 ---?include=binary-trees/slides/bst-design.md
 
 ---?include=binary-trees/slides/bst-operations.md
+
+---?include=binary-trees/slides/red-black-tree.md

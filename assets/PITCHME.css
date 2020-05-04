@@ -22,8 +22,13 @@
   margin-left: 1rem;
 }
 
-.reveal .slides ul {
+.reveal .slides ul, .reveal .slides ol {
   margin-bottom: .8em;
+}
+
+.reveal .slides ul ul, .reveal .slides ul ol, .reveal .slides ol ul, .reveal .slides ol ul {
+  font-size: 0.8em;
+  margin-bottom: 0;
 }
 
 .reveal .slides pre {
