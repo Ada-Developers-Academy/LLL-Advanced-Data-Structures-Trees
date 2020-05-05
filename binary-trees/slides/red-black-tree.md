@@ -156,25 +156,6 @@ If we can find a way to make our trees follow these rules, we're set
 
 ---
 
-## Insert Fixup
-
-1. Do a **normal BST insert**, coloring the new node **red**
-1. **Fixup the tree** so that it follows the rules
-
-We can assume that the **rules held before we started** (why?)
-
-<p class="fragment">Do the rules hold for a **tree of size one**?</p>
-
-<p class="fragment">This kind of reasoning is called **induction**</p>
-
----
-
-## Fixup Induction
-
-![](binary-trees/images/rbt-induction.png)
-
----
-
 ## Rotation
 
 There's one more tool we need: **rotation**
@@ -183,7 +164,28 @@ There's one more tool we need: **rotation**
 
 Idea: swap a node and one of its children, while maintaining the BST property
 
-Code for left- and right-rotate is provided for you!
+<p class="small">Code for left- and right-rotate is provided for you!</p>
+
+---
+
+## Insert Fixup
+
+1. Do a **normal BST insert**, coloring the new node **red**
+1. **Fixup the tree** so that it follows the rules
+
+We can assume that the **rules held before we started**
+
+<p class="small fragment">We "clean as we go", never leaving the tree in a bad state</p>
+
+<p class="fragment">This kind of reasoning is called **induction**</p>
+
+<p class="fragment">Do the rules hold for a **tree of size one**?</p>
+
+---
+
+## Fixup Induction
+
+![](binary-trees/images/rbt-induction.png)
 
 ---
 
@@ -215,10 +217,11 @@ After each step we'll end up with one of two situations:
 
 We're always fixing a violation of rule 4
 
-<!-- pesudocode:
+<!--
+pesudocode:
 while loop condition (node.parent is red)
 iteration (set some ancestor of node to red, set it as our new node, continue)
- -->
+-->
 
 ---
 
@@ -271,7 +274,7 @@ Is `uncle` red or black?
 <li>How would you find `uncle`?</li>
 </ul>
 
-<p class="small">We don't care whether `node` is a left or right child</p>
+<p class="small">We don't care (much) whether `node` is a left or right child</p>
 
 @snapend
 
@@ -308,6 +311,12 @@ We just colored a node red!
 ![](binary-trees/images/rbt-red-uncle.png)
 @snapend
 
+<!--
+pseudocode
+swap colors
+update node
+-->
+
 ---
 
 @snap[northwest span-60]
@@ -328,9 +337,75 @@ We just colored a node red!
 <p class="small fragment">`d` is either the root or a sentinel, so it must be black</p>
 @snapend
 
-@snap[east span-40]
+@snap[east span-35]
 ![](binary-trees/images/rbt-red-uncle-resolution.png)
 @snapend
+
+---
+
+## Final Cleanup
+
+Color the root black
+
+<!--
+pseudocode - color root black after the loop
+-->
+
+---
+
+@snap[northwest span-65]
+## Black Uncle
+
+If `uncle` is black, we can use a rotation to create some wiggle room
+
+How we proceed depends on whether `node` is a left child or right child of `parent`
+@snapend
+
+@snap[east span-30]
+![](binary-trees/images/rbt-black-uncle-cases.png)
+@snapend
+
+---
+
+## Node is Left Child
+
+<p class="small">Swap `parent` and `grandparent` colors, rotate `grandparent` right</p>
+
+![](binary-trees/images/rbt-black-uncle-left.png)
+
+Does this fix all our rules violations? <span class="fragment">**Yes!**</span>
+
+<!--
+pseudocode - left child
+-->
+
+---
+
+## Node is Right Child
+
+<p class="small">We can convert a right child to a left child via rotation</p>
+
+![](binary-trees/images/rbt-black-uncle-right.png)
+
+<p class="small">Double check: does this introduce any new rules violations?</p>
+
+<!--
+pseudocode - right child + condition
+-->
+
+---
+
+## Fixup Analysis
+
+How long does each iteration take?
+
+<p class="small fragment">Constant time</p>
+
+How many iterations, in the worst case?
+
+<p class="small fragment">`\(O(h)\)`</p>
+
+<p class="fragment">Since `insert` was already `\(O(h)\)`, the complexity is the same</p>
 
 ---
 

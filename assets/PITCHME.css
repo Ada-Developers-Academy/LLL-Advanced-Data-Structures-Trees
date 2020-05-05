@@ -57,3 +57,7 @@
   /* Skip the margin at the top of the page */
   margin-top: -4vh;
 }
+
+.reveal .slides img {
+  max-height: 100vh;
+}
